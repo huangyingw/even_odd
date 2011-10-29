@@ -1,3 +1,3 @@
-OBJECTS = second_largest.exe
+OBJECTS = even_odd.exe
 include ../../GNU_makefile_template
-LOCFLAGS = -I../second_largest
+LOCFLAGS = -I../even_odd

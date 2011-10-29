@@ -1,2 +1,2 @@
 make -B \
-&& ./second_largest.exe
+&& ./even_odd.exe
