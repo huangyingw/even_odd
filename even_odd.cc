@@ -4,68 +4,55 @@
 
 using namespace std;
 
-void second_largest(int array[], int len) 
+int f(int a[ ], int len)
 {
   int max,sec_max;
   max=sec_max=-1;
   if (len <=1)
   {
-    cout<<-1<<endl;
-    return;
+    return -1;
   }
   for (int i=0;i<len;i++)
   {
-    if (array[i]>max)
+    if (a[i]>max)
     {
       sec_max=max;
-      max=array[i];
+      max=a[i];
     }
-    else if( array[i] < max && array[i] > sec_max)
+    else if( a[i] < max && a[i] > sec_max)
     {
-      sec_max=array[i];
+      sec_max=a[i];
     }
   }
   if (max != sec_max)
   { 
-    cout<<sec_max<<endl;
+    return sec_max;
   }
 
 }
 
 int main() 
 {
-  /*
-  {1} 1
-  {1, 2} -1
-  {1, 2, 3} 2
-  {1, 2, 3, 4} -2
-  {3, 3, 4, 4} -2
-  {3, 2, 3, 4} 0
-  {4, 1, 2, 3} -2
-  {1, 1} 2
-  {} 0
-  */
-
   int a[] = {4, 2, 5};//4
-  second_largest(a,sizeof(a)/sizeof(int));
+  cout<<f(a,sizeof(a)/sizeof(int))<<endl;
 
   int b[]={1, 2, 3, 4};//3
-  second_largest(b,sizeof(b)/sizeof(int));
+  cout<<f(b,sizeof(b)/sizeof(int))<<endl;
 
   int c[]={4, 1, 2, 3};//3
-  second_largest(c,sizeof(c)/sizeof(int));
+  cout<<f(c,sizeof(c)/sizeof(int))<<endl;
 
   int d[]={1, 1, 2, 2};//1
-  second_largest(d,sizeof(d)/sizeof(int));
+  cout<<f(d,sizeof(d)/sizeof(int))<<endl;
 
   int e[]={1, 1};//-1
-  second_largest(e,sizeof(e)/sizeof(int));
+  cout<<f(e,sizeof(e)/sizeof(int))<<endl;
 
-  int f[]={1};//-1
-  second_largest(f,sizeof(f)/sizeof(int));
+  int h[]={1};//-1
+  cout<<f(h,sizeof(h)/sizeof(int))<<endl;
 
   int g[]={};//-1
-  second_largest(g,sizeof(g)/sizeof(int));
+  cout<<f(g,sizeof(g)/sizeof(int))<<endl;
 
   return 0;
 }
