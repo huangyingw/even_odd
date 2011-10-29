@@ -34,6 +34,18 @@ void second_largest(int array[], int len)
 
 int main() 
 {
+  /*
+  {1} 1
+  {1, 2} -1
+  {1, 2, 3} 2
+  {1, 2, 3, 4} -2
+  {3, 3, 4, 4} -2
+  {3, 2, 3, 4} 0
+  {4, 1, 2, 3} -2
+  {1, 1} 2
+  {} 0
+  */
+
   int a[] = {4, 2, 5};//4
   second_largest(a,sizeof(a)/sizeof(int));
 
