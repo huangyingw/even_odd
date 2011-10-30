@@ -6,10 +6,16 @@ using namespace std;
 
 int f(int a[ ], int len)
 {
-
   //X = the sum of the odd numbers in the array
   //Y = the sum of the even numbers
   int X=0,Y=0;
+  for (int i=0;i<len;i++)
+  {
+    if (0== a[i]%2)
+      Y+=a[i];
+    else
+      X+=a[i];
+  }
   return X - Y;
 }
 
