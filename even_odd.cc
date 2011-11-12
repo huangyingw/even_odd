@@ -48,15 +48,15 @@ int main()
   int i[]={};//0
   cout<<f(i,sizeof(i)/sizeof(int))<<endl;
   /*
-   1
-   -1
-   2
-   -2
-   -2
-   0
-   -2
-   2
-   0
-   */
+     1
+     -1
+     2
+     -2
+     -2
+     0
+     -2
+     2
+     0
+     */
   return 0;
 }
